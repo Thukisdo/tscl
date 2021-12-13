@@ -1,0 +1,12 @@
+
+#IDE related files
+.idea
+
+# Build output
+Release
+release
+
+Debug
+debug
+
+cmake-build*
