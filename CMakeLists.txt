@@ -14,7 +14,7 @@ find_package(Threads REQUIRED)
 include(GNUInstallDirs)
 include(CMakePackageConfigHelpers)
 
-set(INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include/tscl)
+set(INCLUDE_DIR ${CMAKE_CURRENT_LIST_DIR}/include/tscl)
 set(LIB_DIR ${CMAKE_BINARY_DIR}/lib)
 set(BIN_DIR ${CMAKE_BINARY_DIR}/bin)
 

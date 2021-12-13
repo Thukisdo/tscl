@@ -19,7 +19,7 @@ add_library(tscl STATIC
 target_include_directories(tscl
         PUBLIC
         $<BUILD_INTERFACE:${INCLUDE_DIR}>
-        $<INSTALL_INTERFACE:include>
+        $<INSTALL_INTERFACE:include/tscl>
         )
 
 target_link_libraries(tscl
