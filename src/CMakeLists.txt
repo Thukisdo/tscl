@@ -16,6 +16,8 @@ add_library(tscl STATIC
         ${HEADERS}
         )
 
+add_library(tscl::tscl ALIAS tscl)
+
 target_include_directories(tscl
         PUBLIC
         $<BUILD_INTERFACE:${INCLUDE_DIR}>
