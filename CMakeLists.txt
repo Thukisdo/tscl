@@ -1,7 +1,7 @@
-cmake_minimum_required(VERSION 3.17)
+cmake_minimum_required(VERSION 3.16)
 
 
-project(tscl VERSION 0.1.0.0
+project(tscl VERSION 0.1.1.1
         DESCRIPTION "Thukisdo's software conception library"
         LANGUAGES CXX
         )
@@ -27,7 +27,10 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
             "Debug" "Release" "MinSizeRel" "RelWithDebInfo")
 endif()
 
+enable_testing()
+
 add_subdirectory(src)
+add_subdirectory(tests)
 
 set(CMAKE_EXPORT_PACKAGE_REGISTRY ON)
 
