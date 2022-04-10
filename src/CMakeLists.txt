@@ -3,14 +3,12 @@
 set(HEADERS
         "${INCLUDE_DIR}/Version.hpp"
         "${INCLUDE_DIR}/Time.hpp"
-        "${INCLUDE_DIR}/ThreadPool.hpp"
         "${INCLUDE_DIR}/Logger.hpp"
         "${INCLUDE_DIR}/tscl.hpp"
         )
 
 add_library(tscl STATIC
         Logger.cpp
-        ThreadPool.cpp
         Time.cpp
         Version.cpp
         ${HEADERS}

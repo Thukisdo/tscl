@@ -1,4 +1,4 @@
-/** Simple and efficient logging system created by Thukisdo for personal use
+/** Simple and efficient logging system created by Thukisdo (for personal use)
  *
  */
 
@@ -286,7 +286,7 @@ namespace tscl {
      */
     ExceptionLog(std::string const &error, int code = errors::ERR_NONE,
                  Log::log_level level = Log::Error, std::string const &description = "")
-        : std::runtime_error(""), ErrorLog(error, code, level, description) {}
+        : ErrorLog(error, code, level, description) , std::runtime_error("") {}
   };
 
   // ==================================================================

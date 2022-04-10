@@ -56,7 +56,6 @@ namespace tscl {
     tmp << " - " << m_str;
 
     if (m_description != "") {
-      size_t pos = 0;
       tmp << m_description;
     }
 
@@ -101,8 +100,8 @@ namespace tscl {
 
   std::string StreamLogHandler::colorize(Log::log_level level) {
     static std::unordered_map<Log::log_level, std::string> res = {
-            {Log::Trace, "\e[39;90m"},   {Log::Debug, "\e[39;36m"}, {Log::Information, "\e[39;34m"},
-            {Log::Warning, "\e[39;33m"}, {Log::Error, "\e[39;31m"}, {Log::Fatal, "\e[39;35m"}};
+            {Log::Trace, "\033[39;90m"},   {Log::Debug, "\033[39;36m"}, {Log::Information, "\033[39;34m"},
+            {Log::Warning, "\033[39;33m"}, {Log::Error, "\033[39;31m"}, {Log::Fatal, "\033[39;35m"}};
 
     return res[level];
   }
@@ -131,7 +130,7 @@ namespace tscl {
 
     out << log.prefix(tsType()) << log.message() << std::endl;
 
-    if (m_use_ascii_color) out << "\e[0m";
+    if (m_use_ascii_color) out << "\033[0m";
   }
 
   Logger &Logger::operator()(Log const &log) noexcept {

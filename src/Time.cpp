@@ -33,7 +33,7 @@ namespace tscl {
     return ss.str();
   }
 
-  Chrono::Chrono() : m_paused(false), m_current_duration(0) {
+  Chrono::Chrono() : m_current_duration(0), m_paused(false) {
     m_begin = high_resolution_clock::now();
   }
 

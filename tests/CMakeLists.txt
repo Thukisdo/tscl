@@ -9,8 +9,3 @@ set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
 include(GoogleTest)
-
-add_executable(ThreadPoolTest ThreadPoolTest.cpp)
-target_link_libraries(ThreadPoolTest tscl gtest_main)
-
-gtest_discover_tests(ThreadPoolTest)
