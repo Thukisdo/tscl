@@ -573,7 +573,7 @@ namespace tscl {
 
       try {
         buffer = std::make_unique<THandler>(args...);
-      } catch (std::bad_alloc e) {
+      } catch (std::bad_alloc& e) {
         operator()(ErrorLog("Failed log handler allocation", errors::ERR_ALLOCATION_FAILURE,
                             Log::Fatal,
                             "An allocation error occured during log handler allocation"));
