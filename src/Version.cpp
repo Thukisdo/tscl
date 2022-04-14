@@ -8,16 +8,16 @@ namespace tscl {
 
 
   Version::Version(size_t major, size_t minor, size_t patch, std::string tweak)
-          : major(major), minor(minor), patch(patch), tweak(tweak) {}
+          : major_ver(major), minor_ver(minor), patch_ver(patch), tweak(tweak) {}
 
   Version::Version(size_t major, size_t minor, size_t patch, size_t tweak) :
-          major(major), minor(minor), patch(patch), tweak(std::to_string(tweak)) {
+          major_ver(major), minor_ver(minor), patch_ver(patch), tweak(std::to_string(tweak)) {
 
   }
 
   bool Version::operator>(const Version &other) const {
-    return (major > other.major) or (major == other.major and minor > other.minor) or
-           (major == other.major and minor == other.minor and patch > other.patch and
+    return (major_ver > other.major_ver) or (major_ver == other.major_ver and minor_ver > other.minor_ver) or
+           (major_ver == other.major_ver and minor_ver == other.minor_ver and patch_ver > other.patch_ver and
             (tweak.empty() or tweak > other.tweak));
   }
 
@@ -29,11 +29,11 @@ namespace tscl {
     std::stringstream ss(version);
     if (version.starts_with("v")) { ss.ignore(1); }
 
-    ss >> major;
+    ss >> major_ver;
     ss.ignore(1);
-    ss >> minor;
+    ss >> minor_ver;
     ss.ignore(1);
-    ss >> patch;
+    ss >> patch_ver;
     ss.ignore(1);
     std::getline(ss, tweak);
   }
