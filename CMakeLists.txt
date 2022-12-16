@@ -36,7 +36,6 @@ endif()
 enable_testing()
 
 add_subdirectory(src)
-add_subdirectory(tests)
 
 set(CMAKE_EXPORT_PACKAGE_REGISTRY ON)
 
